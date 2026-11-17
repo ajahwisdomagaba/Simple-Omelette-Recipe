@@ -94,10 +94,17 @@ td {
   border-bottom: 1px solid hsl(30, 18%, 87%);
 }
 
+th {
+  padding: 14px 32px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+  color: hsl(30, 10%, 34%);
+  font-weight: 400;
+  text-align: left;
+}
+
 td:last-child {
   color: hsl(14, 45%, 36%);
   font-weight: 700;
-  border-bottom: none;
 }
 
 ul,
@@ -116,4 +123,39 @@ ol {
 .preparation li::marker {
   color: hsl(14, 45%, 36%);
   font-weight: bold;
+}
+
+.ingredients ul {
+  list-style: square;
+}
+
+@media (max-width: 600px) {
+  body {
+    display: block;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    padding: 0 32px 32px;
+  }
+
+  .image {
+    width: calc(100% + 64px);
+    max-width: none;
+    margin-left: -32px;
+    border-radius: 0;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  td,
+  th {
+    padding-inline: 16px;
+  }
 }
